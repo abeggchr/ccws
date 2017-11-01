@@ -24,8 +24,8 @@ public class Rectangle extends Shape {
         return height;
     }
 
-    public boolean contains(int x, int y) {
-        return this.x <= x && x <= this.x + width && this.y <= y && y <= this.y + height;
+    public boolean contains(Point point) {
+        return this.x <= point.getX() && point.getX() <= this.x + width && this.y <= point.getY() && point.getY() <= this.y + height;
     }
 
     public int calculate() {
