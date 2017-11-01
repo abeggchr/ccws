@@ -6,7 +6,8 @@ public class ShapeGroup extends Shape {
     Shape[] shapes = new Shape[10];
     int size = 0;
 
-    public ShapeGroup() {}
+    public ShapeGroup() {
+    }
 
     public ShapeGroup(Shape[] shapes, boolean readOnly) {
         this.shapes = shapes;
@@ -66,5 +67,15 @@ public class ShapeGroup extends Shape {
 
     public void setReadOnly(boolean readOnly) {
         this.readOnly = readOnly;
+    }
+
+    public String toXml() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("<shapegroup>\n");
+        for (int i = 0; i < this.size; i++) {
+            builder.append(this.shapes[i].toXml());
+        }
+        builder.append("</shapegroup>\n");
+        return builder.toString();
     }
 }
