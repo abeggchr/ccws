@@ -24,8 +24,8 @@ public class Circle extends SimpleShape {
         return result;
     }
 
-    private int square(int deltaY) {
-        return deltaY * deltaY;
+    private int square(int number) {
+        return number * number;
     }
 
     public int countContainingPoints(int[] xCords, int[] yCords) {
