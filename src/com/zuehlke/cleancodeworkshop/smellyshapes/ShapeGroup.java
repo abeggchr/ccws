@@ -1,7 +1,8 @@
 package com.zuehlke.cleancodeworkshop.smellyshapes;
 
-public class ShapeGroup extends ComplexShape {
+public class ShapeGroup extends Shape {
 
+    protected boolean readOnly = false;
     Shape[] shapes = new Shape[10];
     int size = 0;
 
@@ -61,5 +62,9 @@ public class ShapeGroup extends ComplexShape {
             }
         }
         return false;
+    }
+
+    public void setReadOnly(boolean readOnly) {
+        this.readOnly = readOnly;
     }
 }
