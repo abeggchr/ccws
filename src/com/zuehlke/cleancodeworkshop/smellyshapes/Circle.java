@@ -62,10 +62,7 @@ public class Circle extends Shape {
     }
 
     public String toString() {
-        return "Circle: (" + center.getX() + "," + center.getY() + ") radius= " + radius
-                + " RGB=" + this.color.getRed() + ","
-                + this.color.getGreen() + ","
-                + this.color.getBlue();
+        return "Circle: " + center + " radius= " + radius + " " + color.rgbString();
     }
 
     public String toXml() {
