@@ -13,7 +13,7 @@ public class Person {
     public Person(String familyName, String givenName, String nationality, boolean olympicMode, boolean capitalizeSurname) {
         this.familyName = familyName;
         this.givenName = givenName;
-        this.personNameStrategy = new PersonNameStrategy(nationality, olympicMode, capitalizeSurname);
+        this.personNameStrategy = PersonNameStrategyFactory.create(nationality, olympicMode, capitalizeSurname);
     }
 
     @Override
